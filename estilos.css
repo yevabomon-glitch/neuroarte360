@@ -1,0 +1,140 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo de tendencia y fuente general */
+body {
+  background: linear-gradient(135deg, #d0f0ff, #fefefe);
+  font-family: 'Segoe UI', sans-serif;
+  color: #092412;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Logo principal */
+.logo {
+  width: 120px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Frase destacada */
+.frase {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  line-height: 1.6;
+  color: hsl(256, 92%, 50%);
+}
+
+/* Sección de accesos rápidos */
+.accesos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+/* Cada caja de acceso */
+.acceso {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding: 2rem;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.acceso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Título dentro de la caja */
+.acceso h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+}
+
+/* Texto dentro de la caja */
+.acceso p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Pie de página */
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #092412;
+  font-size: 0.9em;
+}
+
+.footer-content img {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Responsive para móviles */
+@media (max-width: 800px) {
+  .accesos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .acceso {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .frase {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    width: 100px;
+    margin-top: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
